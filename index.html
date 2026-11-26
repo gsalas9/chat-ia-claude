@@ -635,13 +635,7 @@
       filtros: {
         meses: [...mesesSeleccionados].map(nombreMes),
         estados_ultima_cita: [...estadosSeleccionados]
-      },
-    const visibles = filas.filter(f => mesesSeleccionados.has(f.mes) && estadosSeleccionados.has(f.estado));
-    return {
-      filtros: {
-        meses: [...mesesSeleccionados].map(nombreMes),
-        estados_ultima_cita: [...estadosSeleccionados]
-      },
+      },    
       resumen: {
         pacientes: new Set(visibles.map(f => f.id_paciente)).size,
         acciones: visibles.length,
